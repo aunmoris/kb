@@ -1,0 +1,5 @@
+In order to move the FSMO roles using Powershell, you first have to import the Active Directory module:
+ Start Powershell and type/run “ipmo ActiveDirectory”
+Syntax:
+ Move-ADDirectoryServerOperationMasterRole -identity [target server] -OperationMasterRole [FSMO roles to move seperated by ,]
+ Move-ADDirectoryServerOperationMasterRole -Identity “DC2012? -OperationMasterRole RIDMaster,PDCEmulator, InfrastructureMaster, SchemaMaster, DomainNamingMaster
